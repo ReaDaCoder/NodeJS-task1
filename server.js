@@ -20,6 +20,33 @@ const server = http.createServer((req,res) =>{
         res.end();
     }
 
+    if (url === '/about' && req.method === "POST") {
+        res.write(' Welcome to about us page');
+        res.end();
+    }
+    else if (url === '/contact') {
+        res.write(' Welcome to contact us page');
+        res.end();
+    }
+    else {
+        res.write('Hello World!');
+        res.end();
+    }
+
+    if (url === '/about' && req.method === "PUT") {
+        res.write(' Welcome to about us page');
+        res.end();
+    }
+    else if (url === '/contact') {
+        res.write(' Welcome to contact us page');
+        res.end();
+    }
+    else {
+        res.write('Hello World!');
+        res.end();
+    }
+
+
 });
 
 server.listen(3001, 'localhost', () =>{
